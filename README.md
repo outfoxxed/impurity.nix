@@ -1,5 +1,5 @@
 # impurity.nix
-Impurity is a nixos module for creating impure symlinks
+impurity.nix is a nixos module for creating impure symlinks
 to (usually configuraton) files.
 
 ### Why
@@ -64,6 +64,8 @@ Running this command from your config directory will impurely link specified fil
 $ IMPURITY_PATH=$(pwd) sudo --preserve-env=IMPURITY_PATH nixos-rebuild switch --flake --impure .#example-impure
 ```
 An alias or helper script is advised.
+
+Changes made to linked files will be applied to the files inside your configuration. To lock your configuration back to a pure state after changes have been made, just switch to your normal configuration with `impurity.enable` set to `false`.
 
 ### Creating Impurity Links
 impurity.nix adds an `impurity` attribute to the nixos module arguments.

@@ -16,7 +16,6 @@
     relative = (relativePath path);
     full = impurePath + relative;
   in pkgs.runCommand "impurity-${relative}" {} "ln -s ${full} $out";
-
 in {
   options.impurity = {
     enable = mkOption {

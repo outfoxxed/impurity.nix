@@ -1,7 +1,7 @@
 {
   outputs = _: {
     nixosModules = rec {
-      impurity = import ./impurity.nix;
+      impurity = import ./default.nix;
       default = impurity;
     };
   };
