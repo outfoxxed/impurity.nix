@@ -110,3 +110,8 @@ Example command enabling `foo.conf` and `bar.conf` but not `baz.conf`:
 ```sh
 $ IMPURITY_PATH=$(pwd) IMPURITY_GROUPS="bar" sudo --preserve-env=IMPURITY_PATH,IMPURITY_GROUPS nixos-rebuild switch --flake --impure .#example-impure
 ```
+
+Example command enabling all groups:
+```sh
+$ IMPURITY_PATH=$(pwd) IMPURITY_GROUPS="*" sudo --preserve-env=IMPURITY_PATH,IMPURITY_GROUPS nixos-rebuild switch --flake --impure .#example-impure
+```
