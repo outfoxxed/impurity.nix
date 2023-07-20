@@ -78,7 +78,7 @@ Example module:
 ```nix
 { impurity, ... }: {
   home-manager.users.example-user = {
-    xdg.configFile."foobar.conf" = impurity.link ./foobar.conf;
+    xdg.configFile."foobar.conf".source = impurity.link ./foobar.conf;
   };
 }
 ```
@@ -93,9 +93,9 @@ Example module:
 ```nix
 { impurity, ... }: {
   home-manager.users.example-user = {
-    xdg.configFile."foo.conf" = impurity.link ./foo.conf;
-    xdg.configFile."bar.conf" = impurity.groupedLink "bar" ./bar.conf;
-    xdg.configFile."baz.conf" = impurity.groupedLink "baz" ./baz.conf;
+    xdg.configFile."foo.conf".source = impurity.link ./foo.conf;
+    xdg.configFile."bar.conf".source = impurity.groupedLink "bar" ./bar.conf;
+    xdg.configFile."baz.conf".source = impurity.groupedLink "baz" ./baz.conf;
   };
 }
 ```
