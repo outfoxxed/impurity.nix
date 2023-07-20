@@ -17,7 +17,7 @@ impurity.nix allows the application to change its configuration files
 
 ### How
 impurity.nix creates an intermediary symlink from the target file to the
-corrosponding file in your nix configuration. This allows it to be seamlessly
+corresponding file in your nix configuration. This allows it to be seamlessly
 modified by you or the application.
 
 # Usage
