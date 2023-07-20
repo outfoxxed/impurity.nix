@@ -47,8 +47,8 @@ create an additional impure system output.
         # ...
       };
 
-	  example-impure = self.nixosConfigurations.example.extendModules
-	    { modules = [ { impurity.enable = true; } ] };
+      example-impure = self.nixosConfigurations.example.extendModules
+        { modules = [ { impurity.enable = true; } ] };
     };
   };
 }
